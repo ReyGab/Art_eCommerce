@@ -190,20 +190,20 @@ export default function PrimarySearchAppBar({ cartCount, onOpenCartDialog,
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton onClick={onOpenCartDialog} color="inherit">
+      <MenuItem onClick={handleFilterMenuOpen}>
+        <IconButton  color="inherit">
           <FilterIcon />
         </IconButton>
         <p>Filter</p>
       </MenuItem>
-      <MenuItem>
-        <IconButton onClick={onOpenCartDialog} color="inherit">
+      <MenuItem onClick={handleSortMenuOpen}>
+        <IconButton  color="inherit">
           <SortIcon />
         </IconButton>
         <p>Sort</p>
       </MenuItem>
-      <MenuItem>
-        <IconButton onClick={onOpenCartDialog} color="inherit">
+      <MenuItem >
+        <IconButton  color="inherit">
           <Badge badgeContent={cartCount} color="secondary">
             <ShoppingCartIcon />
           </Badge>
