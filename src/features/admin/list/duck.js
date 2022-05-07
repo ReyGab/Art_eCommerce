@@ -1,6 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
 import axios from 'axios';
-import { parse } from 'uuid';
 import constantsHelper from '../../../util/constants/constants';
 
 import { toast } from 'react-toastify';
@@ -109,7 +108,6 @@ const getPageNextSuccess = (productList) => ({
 
 export const nextPageProducts = (page) => (dispatch) => {
     axios.get(`${constantsHelper.baseUrl}products?_page=${page}&_limit=${constantsHelper.defaultLimit}`).then(response => {
-        console.log(response.data,'PAGINATION');
         dispatch(getPageNextSuccess(response.data));
     })
 }

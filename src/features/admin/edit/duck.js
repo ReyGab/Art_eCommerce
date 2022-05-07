@@ -1,6 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
 import axios from 'axios';
-import { constant } from 'lodash';
 import constantsHelper from '../../../util/constants/constants';
 
 import { toast } from 'react-toastify';

@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import MainContainer from './features/main/container/main';
 import LoginContainer from './features/login/container/login';
 import AdminListContainer from './features/admin/list/container/admin';
+import PageNotFound from './shared-components/page-not-found';
 import auth from '../src/auth';
 
 
@@ -33,7 +34,8 @@ const routes = () => {
                         )
                     }
                 }}/>
-                
+                <Route path="/404" component={PageNotFound}/>
+                <Redirect to="/404"/>
             </Switch>
 
         </Router>
